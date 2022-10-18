@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="diseño_de_app.MainPage">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:CssGradientSource>
+                <![CDATA[
+                 
+                linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)
+                ]]>
+            </magic:CssGradientSource>
+            <!--linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)-->
+        </magic:GradientView>
+        <StackLayout>
+            <Frame BackgroundColor="Transparent"
+                   Margin="1"
+                   Padding="25,0,25,0"
+                   HeightRequest="60"
+                   CornerRadius="50">
+                <Label Text="LOGIN"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       Margin="6"
+                       HorizontalOptions="Center"
+                       TextColor="#73273E" />
+            </Frame>
+            <Frame 
+                   BackgroundColor="Transparent"
+                    Margin="15"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame BackgroundColor="Transparent"
+                       Margin="0,50,0,0"
+                       Padding="25,0,25,0"
+                       CornerRadius="50"
+                       HeightRequest="60">
+                    <Frame BackgroundColor="Transparent"
+                           Padding="25,0,25,0"
+                           BorderColor="Black"
+                           Margin="1"
+                           HeightRequest="60"
+                           CornerRadius="25">
+                        <Entry TextColor="#73273E"
+                               FontSize="18"
+                               Placeholder="Ingrese su Nombre"
+                               PlaceholderColor="#73273E" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="Transparent"
+                   Margin="16,30,15,0"
+                   Padding="25,0,25,0"
+                   CornerRadius="50"
+                   HeightRequest="60">
+                <Frame BackgroundColor="Transparent"
+                       Padding="20,0,25,0"
+                       BorderColor="Black"
+                       Margin="1"
+                       HeightRequest="60"
+                       CornerRadius="25">
+                    <Entry TextColor="#73273E"
+                           FontSize="18"
+                           Placeholder="Ingrese su Contraseña"
+                           PlaceholderColor="#73273E"
+                           IsPassword="True" />
+                </Frame>
+            </Frame>
+            <CheckBox Color="Black"
+                      IsChecked="False"
+                      Margin="30,20,0,0" 
+                      />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="registar"
+                        TextColor="Violet"
+                        BackgroundColor="#CFF5BE"
+                        FontSize="Medium"
+                        x:Name="btnregistrar"
+                        Clicked="btnregistrar_Clicked"
+                        Margin="30,50,0,0"
+                        CornerRadius="25" />
+                <Button Text="ingresar"
+                        TextColor="Violet"
+                        BackgroundColor="#CFF5BE"
+                        FontSize="Medium"
+                        x:Name="btningresar"
+                        Clicked="btningresar_Clicked"
+                        Margin="160,50,0,0"
+                        CornerRadius="25" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

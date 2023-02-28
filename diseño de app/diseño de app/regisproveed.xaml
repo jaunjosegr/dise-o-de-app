@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="diseño_de_app.regisproveed">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:CssGradientSource>
+                <![CDATA[
+                 
+                linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)
+                ]]>
+            </magic:CssGradientSource>
+            <!--linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)-->
+        </magic:GradientView>
+        <StackLayout>
+            <Label Text="REGISTRO DE PROVEEDORES"
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   TextColor="Black" />
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="ID"
+                               PlaceholderColor="#73273E"
+                               TextColor="Black"
+                               Margin="10,0,0,0"
+                               IsReadOnly="True"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="Nombre"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="RFC"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="Correo"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="Telefono"
+                               Keyboard="Telephone"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="Domcilio"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="Cuenta Bancaria"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               Keyboard="Telephone"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame BackgroundColor="transparent"
+                   Margin="15,0,15,0"
+                   Padding="0"
+                   CornerRadius="50">
+                <Frame  BackgroundColor="transparent"
+                        Margin="0,10,0,0"
+                        Padding="4"
+                        CornerRadius="25"
+                        HeightRequest="60">
+                    <Frame BackgroundColor="transparent"
+                           CornerRadius="25"
+                           BorderColor="Black"
+                           HeightRequest="20"
+                           Padding="6">
+                        <Entry Placeholder="Regimen"
+                               PlaceholderColor="#73273E"
+                               Margin="10,0,0,0"
+                               TextColor="Black"
+                               FontSize="18" />
+                    </Frame>
+                </Frame>
+            </Frame>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="REGRESAR"
+                        TextColor="#B68389"
+                        BackgroundColor="#EEC7BD"
+                        FontSize="22"
+                        CornerRadius="25"
+                        Margin="20,15,0,0" />
+                <Button Text="GUARDAR"
+                        TextColor="Violet"
+                        BackgroundColor="#CFF5BE"
+                        FontSize="22"
+                        CornerRadius="25"
+                        Margin="90,15,0,0" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

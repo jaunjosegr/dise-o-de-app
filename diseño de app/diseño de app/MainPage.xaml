@@ -2,93 +2,87 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             NavigationPage.HasNavigationBar="False"
              x:Class="diseño_de_app.MainPage">
     <Grid>
-        <magic:GradientView VerticalOptions="FillAndExpand">
+        <!--<magic:GradientView VerticalOptions="FillAndExpand">
             <magic:CssGradientSource>
-                <![CDATA[
-                 
-                linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)
-                ]]>
+                <![CDATA[  
+             linear-gradient(180deg, rgba(241,253,255,1) 11%, rgba(198,242,255,1) 30%, rgba(147,227,254,1) 52%, rgba(79,194,244,1) 84%, rgba(56,129,236,1) 100%)  ]]>
             </magic:CssGradientSource>
-            <!--linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)-->
-        </magic:GradientView>
-        <StackLayout>
-            <Frame BackgroundColor="Transparent"
-                   Margin="1"
-                   Padding="25,0,25,0"
-                   HeightRequest="60"
-                   CornerRadius="50">
-                <Label Text="LOGIN"
-                       FontAttributes="Bold"
-                       FontSize="30"
-                       Margin="6"
-                       HorizontalOptions="Center"
-                       TextColor="#73273E" />
-            </Frame>
-            <Frame 
-                   BackgroundColor="Transparent"
-                    Margin="15"
-                   Padding="0"
-                   CornerRadius="50">
-                <Frame BackgroundColor="Transparent"
-                       Margin="0,50,0,0"
-                       Padding="25,0,25,0"
-                       CornerRadius="50"
-                       HeightRequest="60">
-                    <Frame BackgroundColor="Transparent"
-                           Padding="25,0,25,0"
-                           BorderColor="Black"
-                           Margin="1"
-                           HeightRequest="60"
-                           CornerRadius="25">
-                        <Entry TextColor="#73273E"
-                               FontSize="18"
-                               Placeholder="Ingrese su Nombre"
-                               PlaceholderColor="#73273E" />
-                    </Frame>
-                </Frame>
-            </Frame>
-            <Frame BackgroundColor="Transparent"
-                   Margin="16,30,15,0"
-                   Padding="25,0,25,0"
-                   CornerRadius="50"
-                   HeightRequest="60">
-                <Frame BackgroundColor="Transparent"
-                       Padding="20,0,25,0"
-                       BorderColor="Black"
-                       Margin="1"
-                       HeightRequest="60"
-                       CornerRadius="25">
-                    <Entry TextColor="#73273E"
-                           FontSize="18"
-                           Placeholder="Ingrese su Contraseña"
-                           PlaceholderColor="#73273E"
-                           IsPassword="True" />
-                </Frame>
-            </Frame>
-            <CheckBox Color="Black"
-                      IsChecked="False"
-                      Margin="30,20,0,0" 
-                      />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="registar"
-                        TextColor="Violet"
-                        BackgroundColor="#CFF5BE"
-                        FontSize="Medium"
-                        x:Name="btnregistrar"
-                        Clicked="btnregistrar_Clicked"
-                        Margin="30,50,0,0"
-                        CornerRadius="25" />
-                <Button Text="ingresar"
-                        TextColor="Violet"
-                        BackgroundColor="#CFF5BE"
-                        FontSize="Medium"
-                        x:Name="btningresar"
-                        Clicked="btningresar_Clicked"
-                        Margin="160,50,0,0"
-                        CornerRadius="25" />
-            </StackLayout>
-        </StackLayout>
+        </magic:GradientView> -->
+        <!--linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)-->
+        
+    <StackLayout>
+        <Button BindingContext="{x:Reference SliderElement}"
+                Opacity="{Binding Value}"
+                Text="konoha"
+                TextTransform="None"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                    BackgroundColor="#8A0202"/>
+        <Slider x:Name="SliderElement" Value="0.50"/>
+            <CarouselView x:Name="TheCarousel"  
+                          PeekAreaInsets="340"
+                          IndicatorView="indicatorview">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <AbsoluteLayout>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="commonstates">
+                                    <VisualState x:Name="currentitem">
+                                        <!-- ESTO ES PARA ELELEMENTO QUE SE MUESTRA-->
+                                        <VisualState.Setters>
+                                            <Setter TargetName="mylabel" Property="Label.TextColor" Value="#58CEFS" />
+                                            <Setter TargetName="mylabel" Property="Label.FontAttributes" Value="Bold" />
+                                            <Setter TargetName="mylabel" Property="Label.FontSize" Value="100" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <!-- ELEMENTO MOSTRADO ANTERIOR MENTE-->
+                                    <VisualState x:Name="previousitem">
+                                        <VisualState.Setters>
+                                         <Setter TargetName="mylabel" Property="Label.TextColor" Value="#2A6375" />
+                                            <Setter TargetName="mylabel" Property="Label.FontAttributes" Value="Bold" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <!-- ELEMENTO SIGUIENTE-->
+                                    <VisualState x:Name="nextitem">
+                                        <VisualState.Setters>
+                                         <Setter TargetName="mylabel" Property="Label.TextColor" Value="#2A6375" />
+                                            <Setter TargetName="mylabel" Property="Label.FontAttributes" Value="Bold" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <!-- ESTO ES PARA EL RESTO DE LOS ELEMENTOS -->
+                                    <VisualState x:Name="defaulyitem">
+                                        <VisualState.Setters>
+                                         <Setter TargetName="mylabel" Property="Label.TextColor" Value="#2A6375" />
+                                            <Setter TargetName="mylabel" Property="Label.FontAttributes" Value="Bold" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.3,AutoSize,AutoSize"
+                                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                                         HorizontalOptions="Center">
+                                <Label  x:Name="mylabel"
+                                        FontSize="80"
+                                        Text="{Binding .}"/>
+                            </StackLayout>
+                        </AbsoluteLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="indicatorview"
+                           Position="1"
+                           AbsoluteLayout.LayoutBounds="0.5,0.95,100,100"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"
+                           IndicatorSize="10"
+                           SelectedIndicatorColor="Black">
+
+                
+            </IndicatorView>
+    </StackLayout>
     </Grid>
 </ContentPage>
+ 

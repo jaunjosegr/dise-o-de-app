@@ -13,21 +13,18 @@ namespace diseño_de_app
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void btnregistrar_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btningresar_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
+            var list = new List<String>
+            {
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            };
+            TheCarousel.ItemsSource = list;
         }
     }
 }

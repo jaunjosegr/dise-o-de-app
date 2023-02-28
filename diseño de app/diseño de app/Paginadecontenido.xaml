@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="diseño_de_app.Paginadecontenido"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             Title="PAROS DE LINEA" 
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Red">
+    <Grid>
+       
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+            <CarouselView>
+                
+            </CarouselView>
+            <Label Text="PAROS DE LINEA "
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   Grid.Column="1"
+                   Grid.RowSpan="1"
+                   Grid.ColumnSpan="2"
+                   TextColor="White"
+                   Margin="15,25,0,0"/>
+            <Label Text="ID"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               FontAttributes="Bold"
+               TextColor="White"
+               Margin="20,0,0,0"
+               Grid.Row="2"/>
+        <Frame Margin="10,22,0,0"
+               CornerRadius="8"
+               Padding="1"
+               BorderColor="Black"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Grid.Row="2">
+            <Entry IsReadOnly="True"
+                   Text="12"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Body"
+                   TextColor="Black" 
+                   />
+        </Frame>
+        <Label Text="Consec. Dia"
+               Grid.Column="2"
+               FontAttributes="Bold"
+               TextColor="White" 
+               Grid.Row="2"/>
+        <Frame Margin="0,22,0,0"
+               CornerRadius="8"
+               Padding="1"
+               BorderColor="Black"
+               Grid.Column="2"
+               Grid.Row="2">
+                <Entry IsReadOnly="True"
+                       Text="10"
+                       HorizontalOptions="Center"
+                       FontSize="Body"/>
+            </Frame>
+        <Label Text="Consec.Lote"
+               Grid.Column="3"
+               FontAttributes="Bold"
+               TextColor="White"
+               Grid.Row="2"/>
+        <Frame Margin="0,22,5,0"
+               CornerRadius="8"
+               Padding="1"
+               BorderColor="Black"
+               Grid.Column="3"
+               Grid.Row="2">
+            <Entry IsReadOnly="True"
+                   Text="8"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Body"
+                   TextColor="Black" />
+        </Frame>
+        <Frame Margin="10,5,10,0"
+               CornerRadius="10"
+               Padding="1"
+               BorderColor="Black"
+               Grid.Row="1"
+               Grid.ColumnSpan="4"
+               Grid.RowSpan="1">
+            <Label Text="BANDA"
+                   Padding="10,0,0,0"
+                   TextColor="Black" />
+        </Frame>
+        <Frame Margin="10,15,0,0"
+               Padding="10,0,10,0"
+               BorderColor="Black"
+               CornerRadius="10"
+               Grid.RowSpan="1"
+               Grid.Row="3"
+               Grid.ColumnSpan="2">
+            <Picker Title="Estación"
+                    TextColor="Black" />
+        </Frame>
+        <Frame Margin="10,15,0,0"
+               Padding="10,0,10,0"
+               BorderColor="Black"
+               CornerRadius="10"
+               Grid.RowSpan="1"
+               Grid.Row="4"
+               Grid.ColumnSpan="2">
+            <Picker Title="Razón"
+                    TextColor="Black" />
+        </Frame>
+        <Frame Margin="10,15,0,0"
+               Padding="10,0,10,0"
+               BorderColor="Black"
+               CornerRadius="10"
+               Grid.RowSpan="1"
+               Grid.Row="5"
+               Grid.ColumnSpan="2">
+            <DatePicker TextColor="Black" />
+        </Frame>
+        <Frame Margin="10,15,0,0"
+               Padding="10,0,10,0"
+               BorderColor="Black"
+               CornerRadius="10"
+               Grid.RowSpan="1"
+               Grid.Row="6"
+               Grid.ColumnSpan="2">
+            <Picker Title="Usuario (opcional)"
+                    TextColor="Black" />
+        </Frame>
+        <Label Text="Motivo"
+               Grid.Column="0"
+               Grid.Row="7"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               FontSize="Title" />
+        <Frame Margin="10,33,10,0"
+               Padding="10,0,10,0"
+               BorderColor="Black"
+               CornerRadius="10"
+               Grid.Row="7"
+               Grid.Column="0"
+               Grid.ColumnSpan="4"
+               Grid.RowSpan="3">
+                <Editor IsSpellCheckEnabled="True"
+                        TextColor="Black"
+                        FontFamily="segoe ui"
+                        IsTextPredictionEnabled="True"
+                        Margin="10,0,10,0" />  
+            </Frame>
+        <Button Margin="10,10,10,0"
+                Grid.ColumnSpan="2"
+                Grid.Column="2"
+                Grid.Row="3"
+                Grid.RowSpan="4"
+                BackgroundColor="Black"
+                Opacity="0.08"
+                TextColor="White"
+                FontAttributes="Bold"
+                Text="FOTO"
+                CornerRadius="15" 
+                x:Name="btnfoto"
+                Pressed="btnfoto_Pressed"/>
+        <ListView Grid.ColumnSpan="2"
+                  Grid.Column="2"
+                  Grid.Row="3"
+                  Grid.RowSpan="4" 
+                  x:Name="listFoto"/>
+         </Grid>
+    </Grid>
+</ContentPage>
+    <!--               
+    BorderColor="Black"
+    Padding="10,10,0,0
+    Margin="10,0,0,0" 
+    
+    
+    <Frame Margin="10,5,00"
+               CornerRadius="5"
+               Padding="1"
+               BorderColor="Black"
+               Grid.Column="0"
+               Grid.Row="0">
+            <Label Text="LOGO"
+                   Padding="10,0,0,0"
+                   TextColor="Black" />
+        </Frame>
+    
+     BackgroundColor="AliceBlue"
+    
+    VerticalTextAlignment="Start"
+    ClearButtonVisibility="WhileEditing"
+    -->

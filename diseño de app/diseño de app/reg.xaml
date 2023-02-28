@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             NavigationPage.HasNavigationBar="False"
              x:Class="diseño_de_app.reg">
     <Grid>
         <magic:GradientView VerticalOptions="FillAndExpand">
@@ -19,7 +20,7 @@
                    Padding="25,0,25,0"
                    HeightRequest="60"
                    CornerRadius="50">
-                <Label Text="LOGIN"
+                <Label Text="REGISTRO"
                        FontAttributes="Bold"
                        FontSize="40"
                        Margin="6"
@@ -112,15 +113,24 @@
                        Margin="1"
                        HeightRequest="60"
                        CornerRadius="25">
-                 
+                    <Picker Title="Elija su ROL"
+                            TitleColor="Black">
+                        <Picker.Items>
+                            <x:String>USUARIO</x:String>
+                            <x:String>SUPER USUARIO</x:String>
+                            <x:String>ADMINISTRADOR</x:String>
+                        </Picker.Items>
+                    </Picker>
                 </Frame>
             </Frame>
             <StackLayout Orientation="Horizontal">
                 <Button Text="REGRESAR"
-                        TextColor="Violet"
-                        BackgroundColor="#CFF5BE"
+                        TextColor="#B68389"
+                        BackgroundColor="#EEC7BD"
                         FontSize="15"
+                        x:Name="btnregresar"
                         Margin="20,50,0,0"
+                        Clicked="btnregresar_Clicked"
                         CornerRadius="25" />
                 <Button Text="GUARDAR Y CONTINUAR"
                         TextColor="Violet"
@@ -128,6 +138,16 @@
                         FontSize="15"
                         Margin="70,50,0,0"
                         CornerRadius="25" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <CheckBox Color="Black"
+                      IsChecked="False"
+                      Margin="30,20,0,0" 
+                      x:Name="checkB"/>
+                <Label Text="Mostrar contraseña"
+                       TextColor="Black"
+                       Margin="10,20,0,0" 
+                       FontSize="20"/>
             </StackLayout>
         </StackLayout>
     </Grid>

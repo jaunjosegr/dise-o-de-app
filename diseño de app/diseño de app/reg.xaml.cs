@@ -16,5 +16,20 @@ namespace diseño_de_app
         {
             InitializeComponent();
         }
+
+        private void btngyc_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
+
+        private void btnregresar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private void checkB_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+
+        }
     }
 }

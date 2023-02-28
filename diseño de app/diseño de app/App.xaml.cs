@@ -10,7 +10,7 @@ namespace diseño_de_app
         {
             InitializeComponent();
 
-            MainPage = new reg();
+            MainPage = new NavigationPage (new Paginadecontenido());
         }
 
         protected override void OnStart()

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="diseño_de_app.busqprod">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:CssGradientSource>
+                <![CDATA[
+                 
+                linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)
+                ]]>
+            </magic:CssGradientSource>
+            <!--linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)-->
+        </magic:GradientView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0"
+                    Text="MIS PRODUCTOS"
+                    TextColor="Azure"
+                    BackgroundColor="#aec7e8"
+                    Margin="10"
+                    CornerRadius="25"/>
+            <Button Grid.Column="1"
+                    Text="HISTORIAL DE VENTAS"
+                    TextColor="Azure"
+                    BackgroundColor="#aec7e8"
+                    Margin="10"
+                    CornerRadius="25"/>
+            <Button Grid.Row="1" 
+                    Text="AÑADIR PRODUCTO"
+                    TextColor="Azure"
+                    BackgroundColor="#aec7e8"
+                    Margin="10"
+                    CornerRadius="25" />
+            <Button Grid.Row="1"
+                    Grid.Column="1"
+                    Text="AÑADIR PROVEEDOR"
+                    TextColor="Azure"
+                    BackgroundColor="#aec7e8"
+                    Margin="10"
+                    CornerRadius="25" />
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Text="MIS PROVEEDORES"
+                    TextColor="Azure"
+                    BackgroundColor="#aec7e8"
+                    Margin="10"
+                    CornerRadius="25" />
+             <Button Grid.Column="1"
+                    Grid.Row="2"
+                    Text="HISTORILA DE COMPRAS"
+                    TextColor="Azure"
+                    BackgroundColor="#aec7e8"
+                    Margin="10"
+                    CornerRadius="25"/>
+        </Grid>
+    </Grid>
+</ContentPage>
